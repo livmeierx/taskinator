@@ -1,7 +1,7 @@
 var formEl = document.querySelector("#task-form");
 var tasksToDoEl = document.querySelector("#tasks-to-do");
 
-var taskFromHandler = function(event) {
+var taskFormHandler = function(event) {
   event.preventDefault();
   var taskNameInput = document.querySelector("input[name='task-name']").value;
   var taskTypeInput = document.querySelector("select[name='task-type']").value;
@@ -39,4 +39,4 @@ var createTaskEl = function(taskDataObj) {
   tasksToDoEl.appendChild(listItemEl);
 }
 
-formEl.addEventListener("submit", taskFromHandler);
+formEl.addEventListener("submit", taskFormHandler);
